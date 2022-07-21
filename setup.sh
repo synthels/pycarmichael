@@ -9,4 +9,4 @@ createDirectories() {
     done
 }
 
-createDirectories "counting-function"
+createDirectories "counting-function" "gaps"

@@ -4,24 +4,10 @@ import csv
 import numpy as np
 
 from sympy.ntheory import factorint, isprime
+from .utils import is_squarefree, is_carmichael
 
 # Upper search bound
 upper_bound = 3*10**7
-
-
-def is_squarefree(primes):
-    for m in primes.values():
-        if m > 1:
-            return False
-    return True
-
-
-def is_carmichael(n, primes):
-    for p in primes.keys():
-        if ((n-1) % (p-1)) != 0:
-            return False
-
-    return (n % 2 == 1)
 
 
 def main():

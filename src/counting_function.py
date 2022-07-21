@@ -4,7 +4,7 @@ import csv
 import numpy as np
 
 from sympy.ntheory import factorint, isprime
-from .utils import is_squarefree, is_carmichael
+from utils import is_squarefree, is_carmichael
 
 # Upper search bound
 upper_bound = 3*10**7

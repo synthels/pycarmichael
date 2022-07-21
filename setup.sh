@@ -3,10 +3,12 @@
 # Creates a series of directories, provided
 # that they don't already exist
 createDirectories() {
-    for dir in $1
+    local -n dirs=$1
+    for dir in "${dirs[@]}"
     do
         mkdir -p -- "$dir"
     done
 }
 
-createDirectories "counting-function" "gaps"
+directories=("counting-function" "gaps") 
+createDirectories directories
